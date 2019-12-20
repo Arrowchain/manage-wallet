@@ -143,6 +143,10 @@ do
     fi
 done
 
+mv "privkeys.txt" "${data_dir}/script_data/$(date "+%Y%m%d")/privkeys.txt"
+mv "opids.txt" "${data_dir}/script_data/$(date "+%Y%m%d")/opids.txt"
+mv "txids.txt" "${data_dir}/script_data/$(date "+%Y%m%d")/txids.txt"
+
 echo -e "[$(timestamp)] - Sleep for 60s"
 sleep 60
 # gracefully shutting down the daemon
@@ -179,7 +183,7 @@ echo -e ""
 if $(pgrep -af "arrowd" > /dev/null); then
   echo -e "[$(timestamp)] ${GREEN}[SUCCESS]${RESET}: Arrow daemon started successfully!"
 else
-  echo -e "[$(timestamp)] ${RED}[ERROR]${RESET}: Arrow daemon didn't restart. Help human - check debug.log in data_dir..."
+  echo -e "[$(timestamp)] ${RED}[ERROR]${RESET}: Arrow daemon didn't restart. Help human - check debug.log in ${data_dir}..."
   exit 0
 fi
 
