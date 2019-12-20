@@ -1,0 +1,6 @@
+{
+  "cli": "/usr/bin/arrow-cli",
+  "cli_daemon": "/usr/bin/arrowd",
+  "data_dir": "/home/ubuntu/data",
+  "live": 0
+}
