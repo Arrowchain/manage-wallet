@@ -7,12 +7,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
     python \
     software-properties-common \
+    ca-certificates \
     build-essential \
     libssl-dev \
     libc6-dev \
     g++-multilib \
     unzip \
-    git \ \
+    git \
     wget \
     curl \
     bsdmainutils \
